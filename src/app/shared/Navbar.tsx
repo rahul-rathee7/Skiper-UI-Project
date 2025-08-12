@@ -2,7 +2,6 @@
 
 import React from 'react'
 import BadgeButton from '@/components/ui/badge-button'
-import ShareButton from '@/components/ui/share-button'
 import { Github, Twitter, Search} from 'lucide-react'
 import ThemeToggleButton from '@/components/ui/theme-toggle-button'
 import Link from 'next/link'

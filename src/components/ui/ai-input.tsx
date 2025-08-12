@@ -93,7 +93,7 @@ export default function AiInput() {
     setImagePreview(null) // Use null instead of empty string
   }
 
-  const handelChange = (e: any) => {
+  const handelChange = (e) => {
     const file = e.target.files ? e.target.files[0] : null
     if (file) {
       setImagePreview(URL.createObjectURL(file))
