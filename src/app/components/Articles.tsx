@@ -1,5 +1,6 @@
+'use client'
+
 import MinimalCard, { MinimalCardTitle, MinimalCardDescription } from '@/components/ui/minimal-card'
-import React, { useState } from 'react'
 
 const Articles = () => {
   const content = [
