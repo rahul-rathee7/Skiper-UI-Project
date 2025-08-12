@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skiper-UI-Project
+This is copied from skiper ui website and here I have added some additional things
+
 
 ## Getting Started
 
