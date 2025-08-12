@@ -4,6 +4,7 @@ import React from "react"
 import Image from "next/image"
 import type { StaticImageData } from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { cn } from "@/lib/utils"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
@@ -29,6 +30,7 @@ interface CarouselProps {
   autoplayDelay?: number
   showPagination?: boolean
   showNavigation?: boolean
+  className?: string
 }
 
 export const CardCarousel: React.FC<CarouselProps> = ({
@@ -36,6 +38,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   autoplayDelay = 1500,
   showPagination = true,
   showNavigation = true,
+  className,
 }) => {
   const css = `
   .swiper {
@@ -65,7 +68,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   }
   `
   return (
-    <section className="w-ace-y-4">
+    <section className={cn("w-ace-y-4", className)}>
       <style>{css}</style>
       <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-gray-400/50 bg-gray-400/20 p-2 shadow-sm md:rounded-t-[44px]">
         <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
