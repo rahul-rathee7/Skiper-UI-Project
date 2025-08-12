@@ -2,6 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
+import type { StaticImageData } from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/css"
@@ -19,7 +20,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 
 interface CarouselProps {
-  images: { src: string; alt: string }[]
+  images: { src: string | StaticImageData; alt: string }[]
   autoplayDelay?: number
   showPagination?: boolean
   showNavigation?: boolean
