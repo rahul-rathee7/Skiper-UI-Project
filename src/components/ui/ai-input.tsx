@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useRef, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
 import { Globe, Paperclip, Plus, Send } from "lucide-react"
@@ -84,7 +84,7 @@ export default function AiInput() {
   const [imagePreview, setImagePreview] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const handelClose = (e: any) => {
+  const handelClose = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
     if (fileInputRef.current) {
@@ -93,7 +93,7 @@ export default function AiInput() {
     setImagePreview(null) // Use null instead of empty string
   }
 
-  const handelChange = (e) => {
+  const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files ? e.target.files[0] : null
     if (file) {
       setImagePreview(URL.createObjectURL(file))
