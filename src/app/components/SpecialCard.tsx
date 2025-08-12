@@ -1,7 +1,6 @@
 'use client'
 
 import { SkiperCard } from '@/components/ui/skiper-card'
-import { image } from 'framer-motion/client'
 import { cn } from '@/lib/utils'
 import React from 'react'
 

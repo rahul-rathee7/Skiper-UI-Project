@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import LandingPage from './components/LandingPage'
 import LoadingPage from './components/LoadingPage'
 
-const page = () => {
+const Home = () => {
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
@@ -20,4 +20,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Home
