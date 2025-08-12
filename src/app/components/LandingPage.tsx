@@ -25,14 +25,16 @@ import ThemesToggle from './ThemesToggle'
 import AnimatedNumberCountdown from '@/components/ui/animated-number-countdown'
 import ScrollX from './ScrollX'
 
+type CarouselImage = {src: string; alt: string}
+
 const LandingPage = () => {
-    const Images = [
-        { src: card1, alt: "card1" },
-        { src: card2, alt: "card2" },
-        { src: card3, alt: "card3" },
-        { src: card4, alt: "card4" },
-        { src: card5, alt: "card5" },
-        { src: card6, alt: "card6" },
+    const Images: CarouselImage[] = [
+        { src: card1.src, alt: "card1" },
+        { src: card2.src, alt: "card2" },
+        { src: card3.src, alt: "card3" },
+        { src: card4.src, alt: "card4" },
+        { src: card5.src, alt: "card5" },
+        { src: card6.src, alt: "card6" },
     ];
 
     const gifts = [

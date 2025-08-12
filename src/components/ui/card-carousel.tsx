@@ -19,8 +19,13 @@ import {
 
 import { Badge } from "@/components/ui/badge"
 
+type CarouseImage = {
+  src: string | StaticImageData;
+  alt: string;
+}
+
 interface CarouselProps {
-  images: { src: string | StaticImageData; alt: string }[]
+  images: CarouseImage[];
   autoplayDelay?: number
   showPagination?: boolean
   showNavigation?: boolean
