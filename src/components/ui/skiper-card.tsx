@@ -127,6 +127,7 @@ export function SkiperCard({
           "absolute left-2/4 top-1/3 flex w-full -translate-x-1/2 -translate-y-[33%] flex-col gap-12 text-center text-2xl font-bold transition-all duration-500 md:w-3/5 "
         )}
       >
+        {image.step4light && (
         <Image
           alt={image.alt}
           className="pointer-events-none top-1/2 w-[90%] overflow-hidden rounded-2xl border border-neutral-100/10 transition-all duration-500 dark:border-zinc-700 md:left-[35px] md:top-[30%] md:w-full"
@@ -139,10 +140,11 @@ export function SkiperCard({
             maxWidth: "unset",
           }}
         />
+        )}
       </div>
 
       <>
-        {/* step 1 */}
+        {image.step1light1 && (
         <Image
           alt={image.alt}
           className={cn(step1img1Class, {
@@ -154,7 +156,8 @@ export function SkiperCard({
             userSelect: "none",
             maxWidth: "unset",
           }}
-        />
+        />)}
+        {image.step1light2 && (
         <Image
           alt={image.alt}
           className={cn(step1img2Class, {
@@ -166,9 +169,10 @@ export function SkiperCard({
             userSelect: "none",
             maxWidth: "unset",
           }}
-        />
+        />)}
 
         {/* step 2 */}
+        {image.step2light1 && (
         <Image
           alt={image.alt}
           className={cn(
@@ -184,6 +188,8 @@ export function SkiperCard({
             maxWidth: "unset",
           }}
         />
+        )}
+        {image.step2light2 && (
         <Image
           alt={image.alt}
           className={cn(
@@ -199,7 +205,9 @@ export function SkiperCard({
             maxWidth: "unset",
           }}
         />
+        )}
         {/* step 3 */}
+        {image.step3light && (
         <Image
           alt={image.alt}
           className={cn(
@@ -216,6 +224,7 @@ export function SkiperCard({
             maxWidth: "unset",
           }}
         />
+        )}
         <div className="absolute left-48 top-5 z-50 size-full cursor-pointer md:left-0">
           <Steps current={step} onChange={() => {}} steps={steps} />
         </div>

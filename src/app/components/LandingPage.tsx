@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import ProductSVG from '@/../public/images/featured.svg'
 import WrapButton from '@/components/ui/wrap-button'
 import card1 from '@/../public/images/card1.png'
@@ -25,16 +25,16 @@ import ThemesToggle from './ThemesToggle'
 import AnimatedNumberCountdown from '@/components/ui/animated-number-countdown'
 import ScrollX from './ScrollX'
 
-type CarouselImage = {src: string; alt: string}
+type CarouselImage = {src: StaticImageData; alt: string}
 
 const LandingPage = () => {
     const Images: CarouselImage[] = [
-        { src: card1.src, alt: "card1" },
-        { src: card2.src, alt: "card2" },
-        { src: card3.src, alt: "card3" },
-        { src: card4.src, alt: "card4" },
-        { src: card5.src, alt: "card5" },
-        { src: card6.src, alt: "card6" },
+        { src: card1, alt: "card1" },
+        { src: card2, alt: "card2" },
+        { src: card3, alt: "card3" },
+        { src: card4, alt: "card4" },
+        { src: card5, alt: "card5" },
+        { src: card6, alt: "card6" },
     ];
 
     const gifts = [
@@ -62,7 +62,7 @@ const LandingPage = () => {
                 <div className='mx-auto w-full max-w-4xl rounded-[24px] border border-gray-400/50 p-2 shadow-sm md:rounded-t-[44px]'>
                     <CardCarousel
                         images={Images}
-                        className="bg-gray-400"
+                        className="bg-black-400 rounded-[24px]"
                     />
                 </div>
                 <div className='mx-auto w-full max-w-4xl rounded-[24px] border border-gray-400/50 p-2 shadow-sm'>

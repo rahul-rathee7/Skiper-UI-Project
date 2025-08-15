@@ -14,6 +14,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
+  Transition,
   type PanInfo,
 } from "framer-motion"
 import { Check, Loader2, SendHorizontal, X } from "lucide-react"
@@ -29,7 +30,7 @@ const BUTTON_STATES = {
   completed: { width: "8rem" },
 }
 
-const ANIMATION_CONFIG = {
+const ANIMATION_CONFIG:{spring: Transition} = {
   spring: {
     type: "spring",
     stiffness: 400,

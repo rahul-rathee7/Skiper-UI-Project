@@ -1,8 +1,13 @@
-import React from "react"
+import React, { ReactNode, ComponentType, SVGProps } from "react";
+import { Badge } from "@/components/ui/badge";
 
-import { Badge } from "@/components/ui/badge"
+interface BadgeButtonProps {
+  children: ReactNode;
+  Icon?: ComponentType<SVGProps<SVGSVGElement>>;
+  className?: string;
+}
 
-const BadgeButton = ({children, Icon, className}) => {
+const BadgeButton: React.FC<BadgeButtonProps> = ({ children, Icon, className }) => {
   return (
     <Badge
       variant="outline"
@@ -11,7 +16,7 @@ const BadgeButton = ({children, Icon, className}) => {
       {Icon && <Icon className={className} />}
       <span className="text-blue-500">{children}</span>
     </Badge>
-  )
-}
+  );
+};
 
-export default BadgeButton
+export default BadgeButton;
